@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const Banking = () => {
+    const [ bankInput, SetBankInput ] = useState('');
+
+    const handleBankingForm = (e) => {
+        e.preventDefault();
+    }
     return (
         <div>
-            <form action="" className="form-group">
-                <input type="text" className="form-control" />
+            <form  onSubmit={handleBankingForm} className="form-group">
+                <input onChange={(e) => SetBankInput(e.target.value)} value={bankInput} type="text" className="form-control" />
 
                 <br /><br />
                 <button className="btn btn-success">Deposit</button>
