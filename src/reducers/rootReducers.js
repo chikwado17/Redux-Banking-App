@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import { bankingReducers } from '../components/bankingReducers';
 
 const rootReducers = combineReducers({
-    hey:() => 'hey'
-})
+   bank:bankingReducers
+});
 
 export default rootReducers;
